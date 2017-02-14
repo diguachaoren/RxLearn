@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@mipmap/replay_ic"/>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="ensure that all observers see the same sequence of emitted items, even if they subscribe after the Observable has begun emitting items"
+            android:textSize="20dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="使用Replay操作符返回的ConnectableObservable 会缓存订阅者订阅之前已经发射的数据，这样即使有订阅者在其发射数据开始之后进行订阅也能收到之前发射过的数据。Replay操作符能指定缓存的大小或者时间，这样能避免耗费太多内存。"
+            android:textSize="20dp"/>
+
+
+        <digua.rxlearn.fragment.other.NoScrollListView
+            android:id="@+id/list_threading_log"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <Button
+            android:id="@+id/replay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="replay"/>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

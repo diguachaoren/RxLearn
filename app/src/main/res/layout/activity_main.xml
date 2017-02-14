@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.alibaba.android.arouter.demo.MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_test_area"
+            android:orientation="vertical"
+            android:padding="@dimen/test_area_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Creating Observables(创建操作)"/>
+
+            <Button
+                android:id="@+id/create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="create"/>
+
+            <Button
+                android:id="@+id/defer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Defer"/>
+
+            <Button
+                android:id="@+id/empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Empty/Never/Throw"/>
+
+            <Button
+                android:id="@+id/from"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="From"
+                />
+
+            <Button
+                android:id="@+id/interval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Interval"
+                />
+
+
+            <Button
+                android:id="@+id/just"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Just"
+                />
+
+            <Button
+                android:id="@+id/range"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="range"
+                />
+
+            <Button
+                android:id="@+id/repeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="repeat"
+                />
+
+            <Button
+                android:id="@+id/start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="start"
+                />
+
+            <Button
+                android:id="@+id/timer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="timer"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/between_cell"
+            android:background="@drawable/bg_test_area"
+            android:orientation="vertical"
+            android:padding="@dimen/test_area_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Transforming Observables(变换操作)"/>
+
+            <Button
+                android:id="@+id/buffer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="buffer"/>
+
+            <Button
+                android:id="@+id/flatmap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="flatmap"/>
+
+            <Button
+                android:id="@+id/groupby"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="groupby"/>
+
+            <Button
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="map"/>
+
+            <Button
+                android:id="@+id/scan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="scan"/>
+
+            <Button
+                android:id="@+id/window"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="window"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/between_cell"
+            android:background="@drawable/bg_test_area"
+            android:orientation="vertical"
+            android:padding="@dimen/test_area_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Filtering Observables(过滤操作)"/>
+
+            <Button
+                android:id="@+id/debounce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Debounce"/>
+
+            <Button
+                android:id="@+id/distinct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Distinct"/>
+
+            <Button
+                android:id="@+id/elementat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ElementAt"/>
+
+            <Button
+                android:id="@+id/filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="filter"/>
+
+
+            <Button
+                android:id="@+id/first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="first"/>
+
+
+            <Button
+                android:id="@+id/ignoreelements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="IgnoreElements"/>
+
+            <Button
+                android:id="@+id/last"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Last"/>
+
+            <Button
+                android:id="@+id/sample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sample"/>
+
+
+            <Button
+                android:id="@+id/skip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Skip"/>
+
+            <Button
+                android:id="@+id/skiplast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SkipLast "/>
+
+            <Button
+                android:id="@+id/take"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="take "/>
+
+
+            <Button
+                android:id="@+id/takelast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="takelast "/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/between_cell"
+            android:background="@drawable/bg_test_area"
+            android:orientation="vertical"
+            android:padding="@dimen/test_area_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Combining Observables(组合操作)"/>
+
+            <Button
+                android:id="@+id/and"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="And/Then/When"/>
+
+            <Button
+                android:id="@+id/combinelatest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CombineLatest"/>
+
+            <Button
+                android:id="@+id/join"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Join"/>
+
+            <Button
+                android:id="@+id/merge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="merge"/>
+
+            <Button
+                android:id="@+id/startwith"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="StartWith"/>
+
+            <Button
+                android:id="@+id/switch_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Switch"/>
+
+            <Button
+                android:id="@+id/zip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="zip"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/between_cell"
+            android:background="@drawable/bg_test_area"
+            android:orientation="vertical"
+            android:padding="@dimen/test_area_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Error Handling Operators(错误操作)"/>
+
+            <Button
+                android:id="@+id/catch_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="catch"/>
+
+            <Button
+                android:id="@+id/retry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="retry"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/between_cell"
+            android:background="@drawable/bg_test_area"
+            android:orientation="vertical"
+            android:padding="@dimen/test_area_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Observable Utility Operators(辅助操作)"/>
+
+            <Button
+                android:id="@+id/delay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Delay"/>
+
+            <Button
+                android:id="@+id/do_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="do"/>
+
+            <Button
+                android:id="@+id/m_d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Materialize/Dematerialize"/>
+
+            <Button
+                android:id="@+id/observe_on"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ObserveOn"/>
+
+            <Button
+                android:id="@+id/serialize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Serialize"/>
+
+            <Button
+                android:id="@+id/subscribe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Subscribe"/>
+
+            <Button
+                android:id="@+id/subscribe_on"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SubscribeOn"/>
+
+            <Button
+                android:id="@+id/timeinterval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TimeInterval"/>
+
+            <Button
+                android:id="@+id/timeout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Timeout"/>
+
+            <Button
+                android:id="@+id/timestamp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Timestamp"/>
+
+            <Button
+                android:id="@+id/using"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Using"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/between_cell"
+            android:background="@drawable/bg_test_area"
+            android:orientation="vertical"
+            android:padding="@dimen/test_area_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Conditional and Boolean Operators(条件和布尔操作)"/>
+
+            <Button
+                android:id="@+id/all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="all"/>
+
+            <Button
+                android:id="@+id/amb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="amb"/>
+
+
+            <Button
+                android:id="@+id/contains"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="contains"/>
+
+
+            <Button
+                android:id="@+id/defaultifempty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="defaultifempty"/>
+
+
+            <Button
+                android:id="@+id/sequenceequal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="sequenceequal"/>
+
+
+            <Button
+                android:id="@+id/skipuntil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="skipuntil"/>
+
+            <Button
+                android:id="@+id/skipwhile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="skipwhile"/>
+
+            <Button
+                android:id="@+id/takeuntil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="takeuntil"/>
+
+            <Button
+                android:id="@+id/takewhile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="takewhile"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/between_cell"
+            android:background="@drawable/bg_test_area"
+            android:orientation="vertical"
+            android:padding="@dimen/test_area_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Mathematical and Aggregate Operators(算术和聚合操作)"/>
+
+            <Button
+                android:id="@+id/average"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="average"/>
+
+            <Button
+                android:id="@+id/concat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="concat"/>
+
+
+            <Button
+                android:id="@+id/count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="count"/>
+
+            <Button
+                android:id="@+id/max"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="max"/>
+
+            <Button
+                android:id="@+id/min"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="min"/>
+
+            <Button
+                android:id="@+id/reduce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="reduce"/>
+
+            <Button
+                android:id="@+id/sum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="sum"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/between_cell"
+            android:background="@drawable/bg_test_area"
+            android:orientation="vertical"
+            android:padding="@dimen/test_area_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Connectable Observable Operators(连接操作)"/>
+
+            <Button
+                android:id="@+id/connect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="connect"/>
+
+            <Button
+                android:id="@+id/publish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="publish"/>
+
+            <Button
+                android:id="@+id/refcount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="refcount"/>
+
+            <Button
+                android:id="@+id/replay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="replay"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/between_cell"
+            android:background="@drawable/bg_test_area"
+            android:orientation="vertical"
+            android:padding="@dimen/test_area_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Operators to Convert Observables(转换操作)"/>
+
+            <Button
+                android:id="@+id/to"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="to"/>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

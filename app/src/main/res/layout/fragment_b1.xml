@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@mipmap/buffer_ic"/>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="periodically gather items from an Observable into bundles and emit these bundles rather than emitting the items one at a time"
+            android:textSize="20dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="它定期从Observable收集数据到一个集合，然后把这些数据集合打包发射，而不是一次发射一个"
+            android:textSize="20dp"/>
+
+        <digua.rxlearn.fragment.other.NoScrollListView
+            android:id="@+id/list_threading_log"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <Button
+            android:id="@+id/buffer1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="buffer:一次订阅2个"/>
+
+        <Button
+            android:id="@+id/buffer2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="buffer:一次全部订阅"/>
+
+
+        <Button
+            android:id="@+id/buffer3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="buffer:每次剔除一个"/>
+
+
+        <Button
+            android:id="@+id/buffer4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="buffer:周期性订阅多个结果"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
