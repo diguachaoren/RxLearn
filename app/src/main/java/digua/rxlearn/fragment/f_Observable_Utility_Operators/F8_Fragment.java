@@ -47,24 +47,24 @@ public class F8_Fragment extends BaseFragment {
 
     @Override
     public View setupView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_f7, container, false);
+        View view = inflater.inflate(R.layout.fragment_f8, container, false);
         return view;
     }
 
     /**
      * 点击事件
      */
-    @OnClick({R.id.subscribeon})
+    @OnClick({R.id.timeinterval})
     public void clickEvent(View view) {
         switch (view.getId()) {
-            case R.id.subscribeon:
+            case R.id.timeinterval:
                 sample1();
                 break;
         }
     }
 
     private void sample1() {
-        Observable.interval(1, TimeUnit.SECONDS, AndroidSchedulers.mainThread()).
+        subscribe = Observable.interval(1, TimeUnit.SECONDS, AndroidSchedulers.mainThread()).
                 timeInterval().subscribe(new Action1<TimeInterval<Long>>() {
             @Override
             public void call(TimeInterval<Long> longTimeInterval) {
@@ -72,9 +72,16 @@ public class F8_Fragment extends BaseFragment {
                 CLog("value = "+longTimeInterval.getIntervalInMilliseconds());
             }
         });
-
-
     }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (subscribe != null) {
+            subscribe.unsubscribe();
+        }
+    }
+
 
 
 }
