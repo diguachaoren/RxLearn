@@ -1,6 +1,16 @@
 # RxLearn
 rxjava example
 
+
+ ![image](https://github.com/diguachaoren/RxLearn/blob/master/img/Snip20170214_6.png)
+ 
+ ![image](https://github.com/diguachaoren/RxLearn/blob/master/img/device-2017-02-14-135538.png)
+ 
+ ![image](https://github.com/diguachaoren/RxLearn/blob/master/img/2.png)
+ 
+ 
+
+
 ## Creating Observables
 
 Operators that originate new Observables.
